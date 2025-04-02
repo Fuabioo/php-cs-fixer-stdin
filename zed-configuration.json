@@ -1,0 +1,18 @@
+{
+  "languages": {
+    "PHP": {
+      "language_servers": ["intelephense", "!phpactor", "..."],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "php-cs-fixer-stdin",
+          "arguments": [
+            "--config=path/to/config",
+            "--using-cache=yes",
+            "--cache-file=path/to/cache"
+          ]
+        }
+      }
+    }
+  }
+}
