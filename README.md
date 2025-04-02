@@ -15,6 +15,8 @@ defined in this tool such as `--config` and `--cache-file`.
 
 With the [Zed editor](https://zed.dev/), you can use this tool by adding the [configuration](zed-configuration.json) to your settings json.
 
+How [Zed formatting](https://zed.dev/docs/configuring-zed#formatter) works for anything other than a language server formatter is that you set up an external CLI tool, to which it will pipe the code. Currently there is no support for providing something like a filepath to the external tool or the like.
+
 > For more information about PHP language support, see [PHP - Zed](https://zed.dev/docs/languages/php).
 
 ### Developing
