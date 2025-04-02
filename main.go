@@ -10,11 +10,21 @@ import (
 	"time"
 )
 
+var (
+	version string = "dev"
+)
+
 func main() {
 	usingCache := flag.String("using-cache", "yes", "Should cache be used (can be `yes` or `no`).")
 	configFile := flag.String("config", "", "The path to a config file.")
 	cacheFile := flag.String("cache-file", "", "The path to the cache file.")
+	displayVersion := flag.Bool("version", false, "Display the version of the tool.")
 	flag.Parse()
+
+	if *displayVersion {
+		fmt.Println("Version:", version)
+		return
+	}
 
 	// generate a temporary file pivot
 	tmpFile := fmt.Sprintf("php-cs-%d.php", time.Now().UnixNano())
