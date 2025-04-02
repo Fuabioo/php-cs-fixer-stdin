@@ -4,10 +4,11 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"log"
 	"os"
 	"os/exec"
 	"time"
+
+	"github.com/charmbracelet/log"
 )
 
 var (
@@ -68,7 +69,7 @@ func main() {
 	// we log them so the editor can display them to the user
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		log.Println(string(output))
+		log.Error(string(output))
 		log.Fatal(err)
 	}
 
