@@ -6,6 +6,14 @@
 
 Some code editors support stdin integration, allowing users to pipe code directly into the editor for formatting and linting. This tool provides a convenient way to integrate PHP CS Fixer with such editors.
 
+## Installation
+
+```sh
+wget https://github.com/Fuabioo/php-cs-fixer-stdin/releases/latest/download/php-cs-fixer-stdin_$(uname -s)_$(uname -m).tar.gz
+tar -xzf php-cs-fixer-stdin_$(uname -s)_$(uname -m).tar.gz
+chmod +x php-cs-fixer-stdin
+```
+
 ## Usage
 
 Since this is a wrapper to php-cs-fixer fix command then you can use any flag
